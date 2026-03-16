@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header.cabecalho
+    h1.titulo #{title}
+    p.sutitulo Bem vindo ao site da #{title}
+  
+  main
+    img(src="https://upload.wikimedia.org/wikipedia/pt/thumb/6/6a/VoleiBlumenau.png/250px-VoleiBlumenau.png", alt="equipe de voleibol Blumenau")
+
+    h2 Venha conhecer o nosso site e fique por dentro de tudo sobre o voleibol em Blumenau!
+    button.btn(type="button" onclick="proximaPagina()") Ir a página principal
+ 
+  footer
+    p Rodapé do site - Todos os direitos reservados.
+    p Contato: (48)92345-6789 | Email: info@voleibolblumenau.com.br

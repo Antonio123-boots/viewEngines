@@ -1,3 +1,25 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= message %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+      </header>
+
+      <main>
+        <pre><%= error.stack %></pre>
+      </main>
+
+      <footer class="site-footer">
+        <p>Entre em contato com o administrador se o erro persistir.</p>
+      </footer>
+    </div>
+  </body>
+</html>
