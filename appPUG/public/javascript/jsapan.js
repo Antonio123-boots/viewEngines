@@ -5,13 +5,14 @@ function proximaPagina() {
 }
 
 function navega() {
-    window.location.href = "/"; 
-
-if(window.confirm("Quer mesmo?") === true) {
-    window.location.href = "/";
-}else {
-    alert("Você permaneceu na página atual.");
-    console.log("Usuário optou por permanecer na página atual.");}
+    if(window.confirm("Quer mesmo?") === true) {
+        window.location.href = "/";
+        return true;
+    } else {
+        alert("Você permaneceu na página atual.");
+        console.log("Usuário optou por permanecer na página atual.");
+        return false;
+    }
 }
 
 const form = document.getElementById('formCadastro');

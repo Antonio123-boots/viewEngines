@@ -1,0 +1,42 @@
+<div class="avaliacao-container">
+  <h1>{{title}}</h1>
+  {{#if mensagem}}
+    <div class="mensagem-sucesso">{{mensagem}}</div>
+  {{/if}}
+  <p>Obrigado por visitar nosso site! Sua opinião é muito importante para nós. Por favor, avalie sua experiência.</p>
+
+  <form action="/avaliacao" method="post" class="avaliacao-form">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="avaliacao">Avaliação Geral:</label>
+      <select id="avaliacao" name="avaliacao" required>
+        <option value="">Selecione</option>
+        <option value="5">⭐⭐⭐⭐⭐ - Excelente</option>
+        <option value="4">⭐⭐⭐⭐ - Muito Bom</option>
+        <option value="3">⭐⭐⭐ - Bom</option>
+        <option value="2">⭐⭐ - Regular</option>
+        <option value="1">⭐ - Ruim</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comentarios">Comentários (opcional):</label>
+      <textarea id="comentarios" name="comentarios" rows="4" placeholder="Conte-nos mais sobre sua experiência..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Enviar Avaliação</button>
+  </form>
+
+  <div class="avaliacao-info">
+    <p>Sua avaliação será analisada pela nossa equipe. Agradecemos seu feedback!</p>
+  </div>
+</div>
