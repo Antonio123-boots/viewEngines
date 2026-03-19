@@ -16,9 +16,14 @@
       <main>
         <h2>Bem vindo para a área de <%= title %></h2>
         <p>Aqui você poderá comprar tudo que deseja</p>
-        <img src="https://guiadacozinha.com.br/wp-content/uploads/2018/10/paofrancesfolhado.jpg" alt="pão francês" width="24%"class="imagem" />
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrJZMoB7eccmOpPFS99ROmNXxlGYQrYJdVbg&s" alt="chocolate" width="20%"class="imagem" />
-        <img src="https://imagens.jotaja.com/produtos/3263/F1E99B46D54B6C1A0E89FE9EDB003B984FE80DE2BC36F0FD2BD5CB06A31A22BF.jpeg" alt="pão francês" width="28%"class="imagem" />
+        <div class="produtos-card">
+          <%alimentos.forEach(alimentos => { %>
+          <div class="alimento-nome"> <% alimento.nome %> </div>
+          <div class="alimento-descrição"> descrição do <% alimento.nome %> </div>
+          <div class="produto-preço"> R$ <% alimento.preco.toFixed(2).replace('.',',') %> </div>
+          <button class="botao">Comprar</button>
+        </div>
+        <% })%>
       </main>
 
       <footer class="site-footer">
